@@ -1,0 +1,32 @@
+<script src="/cdn-cgi/apps/head/WigZ_q-ptibmwcIppGeFAh1lIuQ.js"></script><script type="text/javascript" charset="utf-8" async="" src="https://ssl.p.jwpcdn.com/player/v/8.17.1/jwpsrv.js"></script>
+<script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"> </script>
+<script charset="utf-8" src="https://ssl.p.jwpcdn.com/player/v/8.17.1/jwplayer.core.controls.js"></script>
+<script charset="utf-8" src="/https://ssl.p.jwpcdn.com/player/v/8.17.1/provider.shaka.js"></script>
+<script> jwplayer.key='XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+canal= "https://supercanal-cdn2.tbxdrm.com/tntsports/manifest.mpd";
+key = "https://proxy.tbxdrm.com/v1/drm-proxy/widevine/modular/supercanal?contentId=tntsports.smil&ed=null&p=false&ip=134.209.254.185&nva=2020-12-20T23%3A17%3A14.322Z&d=dd2a69f0884a094c7a4653a52e61df21a3cfb03c&token=51ef01fb5d17542699bbe9a47eb21b1105ff98e156ad11dfd00ab790e8f4118f"
+</script>
+<div id="player"></div>
+<script>
+        var playerInstance=jwplayer("player");
+        playerInstance.setup( {
+
+            playlist: [ {
+            title : "Kahsad TV | TNT Sports",
+             description: "Disfruta TNT Sports de Manera Gratuita con Kahsad TV",
+             image: 'https://i0.wp.com/qepd.news/wp-content/uploads/2019/07/cropped-tnt-sports.jpg?fit=600%2C337&ssl=1', 
+                "sources": [ {
+                    "default": false, "file": canal, "drm": {
+                        "widevine": {
+                             "url": key
+                        }
+                    }
+                    , "label": "0", "type": "mpd"
+                }
+                ]
+            }
+            ], width: "100%",  height: "100%", aspectratio: "16:9", autostart: false, cast: {}
+            
+        }
+        );
+</script>
