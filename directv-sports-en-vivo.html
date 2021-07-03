@@ -89,7 +89,7 @@
 <a class="button" target="iframe" href="https://embedkahsadtv12.blogspot.com/2021/04/blog-post_28.html">Opción 3 (Bitmovin)</a>
 <a class="button" target="iframe" href="//games.ok.ru/videoembed/2276049035007?autoplay=1&nochat=1">Opción 4 (OK.RU)</a>    
 <a class="button" target="iframe" href="https://futbollibre.net/en-vivo/directv-sports/embed_dtv2.html">Opción 5 M3U8 (Celular, SmarTV o PC con extensión HLS)</a> 
-<a class="button" target="iframe" href="/extension.html?embed=Y2hyb21lLWV4dGVuc2lvbjovL2xjaXBlbWJqZmttZWdncGloZHBkZ25qaWxkZ25pZmZsL3BsYXllci5odG1sI2h0dHBzOi8vZHR2LWxhdGFtLWFiYy5ha2FtYWl6ZWQubmV0L2Rhc2gvbGl2ZS83MDA0MjYvZHR2L0RUVi1BQkMtZHR2c3BvcnRzYXJnZW50aW5hL21hc3Rlci5tcGQ/Jmw9aHR0cHM6Ly90dWN1bWFudHZkaWdpdGFsLnh5ei9kdHYxX3dpZGV2aW5lLnBocA==">Opción 6 (Sólo PC - Chrome)</a>
+<button id="opExt" onclick='document.getElementById("iframe").src = "//i.futbollibre.net/extension/?c=Y2hyb21lLWV4dGVuc2lvbjovL2xjaXBlbWJqZmttZWdncGloZHBkZ25qaWxkZ25pZmZsL3BsYXllci5odG1sI2h0dHBzOi8vZHR2LWxhdGFtLWFiYy5ha2FtYWl6ZWQubmV0L2Rhc2gvbGl2ZS83MDA0MjYvZHR2L0RUVi1BQkMtZHR2c3BvcnRzYXJnZW50aW5hL21hc3Rlci5tcGQ/Jmw9aHR0cHM6Ly9jZG4xNC5lc3AtY2RuLnh5ei93di9EMS5waHA="' class="btn btn-warning"><img src="/img/player/icon24.png"> OPCIÓN RECOMENDADA</button>
 <a class="button" target="iframe" href="https://pelotero.net/directvsports.php">Opción 7 (Telerium - ADS)</a>
 <div class="sharethis-inline-share-buttons"></div>
 <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5ab9c9531fff98001395a59a&product=inline-share-buttons"></script>
@@ -116,6 +116,19 @@
 <div class="footer">
 <p>Mega Deportes 2021 &copy; Todos los derechos reservados.&nbsp; - <a href="/dmca/" rel="nofollow">DMCA - <script id="_wauc0x">var _wau = _wau || []; _wau.push(["small", "55fki220bj", "c0x"]);</script><script async src="//waust.at/s.js"></script></p>
 </div>
+<script type="text/javascript">
+         function getChromeVersion () { 
+            let raw = 0; 
+            if(!/Android/i.test(navigator.userAgent) ) {   
+              raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+             }
+             return raw ? parseInt(raw[2], 10) : false;
+         }
+         function btnExt(data){
+           data >= 91 ? document.getElementById("opExt").style.display = "block" : document.getElementById("opExt").style.display = "none";  
+         }
+         btnExt(getChromeVersion())
+      </script>    
 <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script async src="https://megatelevisionhd.xyz/js/scripts.js?v=e"></script>
 <script id="cid0020000283462612081" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 200px;height: 300px;">{"handle":"kahsadtv123","arch":"js","styles":{"a":"000066","b":96,"c":"FFFFFF","d":"FFFFFF","f":96,"i":96,"k":"000066","l":"000066","m":"000066","n":"FFFFFF","o":96,"p":"10","q":"000066","r":96,"pos":"br","cv":1,"cvbg":"000066","cvbga":96,"cvw":75,"cvh":30}}</script>
