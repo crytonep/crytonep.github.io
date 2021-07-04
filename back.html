@@ -47,8 +47,10 @@
 <h1>Mega Deportes TV</h1>
 <h2>En Mega Deportes podrás ver todos los partidos de la Copa América 2021, Eurocopa 2020, Copa Libertadores, Copa Sudamericana y las ligas más importantes de Europa.</h2>
 <div class=container id=container>
-<div class="clean-gray">¡Visita Mega Televisión para ver más canales en VIVO y Películas en HD! <b><a href="https://megatelevisionhd.xyz">Mega Televisión</a></i></div>    
-<div class="clean-gray"><i style="color:red">AVISO:</i> Si no te funcionan los canales con la opción principal (1) u opción 2 (Bitmovin), te recomendamos instalar los navegadores Firefox u Opera. <b><a target="blank" href="https://www.mozilla.org/es-AR/firefox/new/">Descargar Firefox</a> - <a target="blank" href="https://www.opera.com/es">Descargar Opera</a></i></div>       
+<div class="alert">
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+<b>Aviso!</b> Si no te funcionan los canales con la opción principal (1) u opción 2 (Bitmovin), te recomendamos instalar los navegadores Firefox u Opera. <b><a target="blank" href="https://www.mozilla.org/es-AR/firefox/new/">Descargar Firefox</a> - <b><a target="blank" href="https://www.opera.com/es">Descargar Opera</a></b></div>    
+<div class="clean-gray">¡Visita Mega Televisión para ver más canales en VIVO y Películas en HD! <b><a href="https://megatelevisionhd.xyz">Mega Televisión</a></i></div>           
 <div class="addthis_inline_share_toolbox_ptt1"></div>
 <input id="buscar" type="search" placeholder="Buscar canal..." class="search">
 <h2>Agenda Deportiva</h2>
@@ -203,6 +205,38 @@
 </div> </div>
 <div class="sharethis-inline-share-buttons"></div>
 </div>
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+<span class="close">&times;</span>
+<b></b>
+</div>
+</div>
+<script type="text/javascript">
+	// Get the modal
+var modal = document.getElementById("myModal");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function cargar() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 <div class="footer">
 <p>Mega Deportes TV | &copy; Todos los derechos reservados.&nbsp; - <a href="/dmca/" rel="nofollow">DMCA - <script id="_wauc0x">var _wau = _wau || []; _wau.push(["small", "55fki220bj", "c0x"]);</script><script async src="//waust.at/s.js"></script></p>
 </div>
