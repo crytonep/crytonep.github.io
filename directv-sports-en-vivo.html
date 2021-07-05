@@ -79,10 +79,44 @@
 <a class="buttonads button2" target="blank" href="/acceder/">Ver Ahora</a>
 <a class="buttonads" target="blank" href="/acceder/">Ver en HD</a>
 <div class=container id=container>
-<div class="clean-gray"><i style="color:red">AVISO:</i> Para reproducir la opción 6 en PC, debes instalar la extensión reproductor M3U8 (HLS) <b><a target="blank" href="https://chrome.google.com/webstore/detail/reproductor-m3u8-hls-play/lcipembjfkmeggpihdpdgnjildgniffl">Reproductor M3U8 (Chrome)</a> - <a target="blank" href="https://addons.mozilla.org/es/firefox/addon/hls-js-playback/">Reproductor M3U8 (Firefox)</a></i></div>
-<div class="iframe-container">
+<div class="alert">
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+<b>Aviso!</b> Para reproducir la opción 5 en PC, debes instalar la extensión reproductor M3U8 (HLS) <b><a target="blank" href="https://chrome.google.com/webstore/detail/reproductor-m3u8-hls-play/lcipembjfkmeggpihdpdgnjildgniffl">Reproductor M3U8 (Chrome)</a> - <b><a target="blank" href="https://addons.mozilla.org/es/firefox/addon/hls-js-playback/">Reproductor M3U8 (Firefox)</a></b></div> <div class="iframe-container">
 <iframe allow="encrypted-media" width="100%" height="100%" src="https://embedkahsadtv12.blogspot.com/2021/06/dtaa.html" id="iframe" name="iframe" frameborder="0" scrolling="no" allowfullscreen></iframe>
 </div>
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+<span class="close">&times;</span>
+<b></b>
+</div>
+</div>
+<script type="text/javascript">
+	// Get the modal
+var modal = document.getElementById("myModal");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function cargar() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+    
 <div class="opciones">
 <a class="button" target="iframe" href="//embedkahsadtv12.blogspot.com/2021/06/dtaa.html">Opción 1 (JWPlayer)</a>    
 <a class="button" target="iframe" href="https://player.twitch.tv/?channel=megadeportestv1&parent=crytonep.github.io">Opción 2 (Twitch)</a>
