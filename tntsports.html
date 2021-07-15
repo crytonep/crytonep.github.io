@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<script src="/cdn-cgi/apps/head/bdXKEs2GnhJP7BcpCR28GDM77_w.js"></script><script src="//ssl.p.jwpcdn.com/player/v/8.0.12/jwplayer.js"></script>
+<script src="https://megatelevisionhd.xyz/js/jq-migrate.min.js?var=1.14.2"></script>
+<meta http-Equiv="Pragma" Content="no-cache" />
+<meta http-Equiv="Expires" Content="0" />
+<meta name="robots" content="noindex,nofollow">
+<body>
+<style type="text/css">    body {
+       margin: 0;
+}</style>
+<script>
+    jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+</script>
+<div id="player"></div>
+<script>
+     var ghttp = new XMLHttpRequest();
+        ghttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jsonResponse = JSON.parse(ghttp.responseText);
+                        var m3u8 = GibberishAES.dec(jsonResponse['token'], ".3tnt99");
+                        var playerInstance = jwplayer("player");
+                        playerInstance.setup({
+                            file: m3u8,
+                            title : "Mega Deportes | TNT Sports",
+                            description: "Mirar el canal TNT Sports de manera gratuita",
+                            image: "https://i.imgur.com/eHaLgt8.png",
+                            type: "hls",
+                            width: "100%",
+                            height: "100%",
+                            aspectratio: "16:9",
+                            autostart: false,
+                            cast: {},
+                        });
+                        playerInstance.on('error', function(evt) {
+                            console.log("error");
+                            location.href='https://player.megatelevisionhd.xyz/packfutbol/flow.html?get=aHR0cHM6Ly9lZGdlNS1zbC5jdmF0dHYuY29tLmFyLy9saXZlL2MzZWRzL1ROVF9TcG9ydHNfSEQvU0FfTGl2ZV9kYXNoX2VuY18yQS9UTlRfU3BvcnRzX0hELm1wZA==';
+                        }
+                        );
+                        playerInstance.on('setupError', function(evt) {
+                            console.log("error");
+                            location.href='https://player.megatelevisionhd.xyz/packfutbol/flow.html?get=aHR0cHM6Ly9lZGdlNS1zbC5jdmF0dHYuY29tLmFyLy9saXZlL2MzZWRzL1ROVF9TcG9ydHNfSEQvU0FfTGl2ZV9kYXNoX2VuY18yQS9UTlRfU3BvcnRzX0hELm1wZA==';
+                        }
+                        );
+
+                    }
+                }
+        ghttp.open("GET", "https://cors.bridged.cc/https://bit.ly/2VKScZB?" + Math.random().toString(36).substring(7), true);
+        ghttp.send();
+</script>
