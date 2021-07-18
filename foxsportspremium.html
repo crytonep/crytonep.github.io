@@ -1,4 +1,4 @@
-<script src="//ssl.p.jwpcdn.com/player/v/8.18.2/jwplayer.js"></script><script>
+<script src="//ssl.p.jwpcdn.com/player/v/8.14.0/jwplayer.js"></script><script>
     jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
 </script>
 <body>
@@ -10,7 +10,7 @@ var playerInstance = jwplayer("player");
 
     var x = Math.random().toString(36).substring(7);
 
-    xhttp.open("GET", "https://cors.bridged.cc/https://bit.ly/2UmEOdR?"+x, true);
+    xhttp.open("GET", "https://cors.bridged.cc/https://bit.ly/3wLT50U?"+x, true);
     xhttp.send();
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -23,12 +23,12 @@ var playerInstance = jwplayer("player");
                 image : "https://vivos.superliga-argentina.com/wp-content/uploads/fox-sports-premium-logo-grande.jpg",
                  description: "Mirar el canal FOX Sports Premium gratis",
                     "sources": [ {
-                        "default": false, "file": atob(jsonResponse["source"]), "label": "0", "type": "mpd"
+                        "default": false, "file": atob(jsonResponse["source"]), "label": "0", "type": "m3u8"
                     }
                     ]
                 }
                 ], width: "100%",  height: "100%", aspectratio: "16:9", autostart: false, cast: {}
-                , sharing: {},
+                ,
 		});
 	}
 }
