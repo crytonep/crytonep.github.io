@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clappr player with shaka-p2p-engine (MPEG-DASH only)</title>
+<script src="/cdn-cgi/apps/head/ulIRyxHn-1bIcLYrnVKNzXXyMy8.js"></script><script src="//cdn.jsdelivr.net/npm/@clappr/player@0.4.0/dist/clappr.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/mux.js@5.6.7/dist/mux.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/shaka-player@2.5.10/dist/shaka-player.compiled.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.external.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/cdnbye-shaka@latest"></script>
+<style type="text/css">
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; background-color: #000;
+    margin: 0;
+}
+#video {
+    width: 100vw;
+    height: 100%;
+    //max-height: 100vh;
+    //max-width: 177.78vh;
+    //margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; background-color: #000;
+    right: 0;
+}
+</style>
+</head>
+<body>
+<div id="video"></div>
+<p id="version"></p>
+<h3>p2p info:</h3>
+<p id="peers"></p>
+<p id="info"></p>
+<script>
+
+    var player = new Clappr.Player({
+        parentId: "#video",
+        source: "https://edge3-sl.cvattv.com.ar//live/c3eds/TyCSport/SA_Live_dash_enc_2A/TyCSport.mpd",
+        plugins: [DashShakaPlayback],
+          width: '100%',
+          height: '100%',
+        shakaConfiguration: {
+          drm: {
+            servers: {
+              'com.widevine.alpha': 'https://sv.megatelevisionhd.com/cv.php'
+           } 
+        } 
+       },
+        shakaOnBeforeLoad: function(shakaPlayerInstance) {
+            if (P2PEngineShaka.isSupported()) {
+                var engine = new P2PEngineShaka(shakaPlayerInstance, {
+                   // logLevel: 'debug',
+                });
+                 engine.on('stats', function (stats) {
+            var total = stats.totalHTTPDownloaded + stats.totalP2PDownloaded;
+            document.querySelector('#info').innerText = `p2p ratio: ${Math.round(stats.totalP2PDownloaded/total*100)}%   saved traffic: ${Math.round(stats.totalP2PDownloaded)}KB upload: ${Math.round(stats.totalP2PUploaded)}KB`;
+        })
+        engine.on('peers', function (peers) {
+            document.querySelector('#peers').innerText = `peers: ${peers.length}`;
+        })
+            }
+        }
+
+    });
+
+    player.play();
+
+</script>
+</body>
+</html>
